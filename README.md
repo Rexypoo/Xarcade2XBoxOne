@@ -25,7 +25,7 @@ git clone https://github.com/rexypoo/Xarcade2XBoxOne
 
 ## Building and Installation
 
-To build Xarcade2Jstick follow these commands:
+To build Xarcade2XBoxOne follow these commands:
 ```bash
 cd Xarcade2XBoxOne
 make
