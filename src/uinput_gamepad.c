@@ -73,12 +73,12 @@ int16_t uinput_gpad_open(UINP_GPAD_DEV* const gpad, UINPUT_GPAD_TYPE_E type,
 	// gamepad, buttons
 	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_A);
 	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_B);
-	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_C);
 	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_X);
 	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_Y);
-	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_Z);
 	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_TL);
+	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_TL2);
 	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_TR);
+	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_TR2);
 	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_SELECT);
 	ioctl(gpad->fd, UI_SET_KEYBIT, BTN_START);
 

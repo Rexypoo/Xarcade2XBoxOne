@@ -137,28 +137,28 @@ int main(int argc, char* argv[]) {
 				/* ----------------  Player 1 controls ------------------- */
 				/* buttons */
 				case KEY_LEFTCTRL:
-				  outputKeyPress(0,BTN_A, isPressed);
+				  outputKeyPress(0,BTN_X, isPressed);
 					break;
 				case KEY_LEFTALT:
-					outputKeyPress(0,BTN_B, isPressed);
-					break;
-				case KEY_SPACE:
-					outputKeyPress(0,BTN_C, isPressed);
-					break;
-				case KEY_LEFTSHIFT:
-					outputKeyPress(0,BTN_X, isPressed);
-					break;
-				case KEY_Z:
 					outputKeyPress(0,BTN_Y, isPressed);
 					break;
+				case KEY_SPACE:
+					outputKeyPress(0,BTN_TR, isPressed);
+					break;
+				case KEY_LEFTSHIFT:
+					outputKeyPress(0,BTN_A, isPressed);
+					break;
+				case KEY_Z:
+					outputKeyPress(0,BTN_B, isPressed);
+					break;
 				case KEY_X:
-					outputKeyPress(0,BTN_Z, isPressed);
+					outputKeyPress(0,BTN_TR2, isPressed);
 					break;
 				case KEY_C:
 					outputKeyPress(0,BTN_TL, isPressed);
 					break;
 				case KEY_5:
-					outputKeyPress(0,BTN_TR, isPressed);
+					outputKeyPress(0,BTN_TL2, isPressed);
 					break;
 				case KEY_1:
 					outputKeyPress(0,BTN_START, isPressed);
@@ -186,28 +186,28 @@ int main(int argc, char* argv[]) {
 					/* ----------------  Player 2 controls ------------------- */
 					/* buttons */
 				case KEY_A:
-					outputKeyPress(1,BTN_A,	isPressed);
+					outputKeyPress(1,BTN_X,	isPressed);
 					break;
 				case KEY_S:
-					outputKeyPress(1,BTN_B, isPressed);
-					break;
-				case KEY_Q:
-					outputKeyPress(1,BTN_C, isPressed);
-					break;
-				case KEY_W:
-					outputKeyPress(1,BTN_X, isPressed);
-					break;
-				case KEY_E:
 					outputKeyPress(1,BTN_Y, isPressed);
 					break;
+				case KEY_Q:
+					outputKeyPress(1,BTN_TR, isPressed);
+					break;
+				case KEY_W:
+					outputKeyPress(1,BTN_A, isPressed);
+					break;
+				case KEY_E:
+					outputKeyPress(1,BTN_B, isPressed);
+					break;
 				case KEY_LEFTBRACE:
-					outputKeyPress(1,BTN_Z, isPressed);
+					outputKeyPress(1,BTN_TR2, isPressed);
 					break;
 				case KEY_RIGHTBRACE:
 					outputKeyPress(1,BTN_TL, isPressed);
 					break;
 				case KEY_6:
-					outputKeyPress(1,BTN_TR, isPressed);
+					outputKeyPress(1,BTN_TL2, isPressed);
 					break;
 				case KEY_2:
 					/* handle combination */
