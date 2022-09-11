@@ -1,5 +1,7 @@
-Xarcade2Joystick
+Xarcade2XboxOne
 ================
+
+_Xarcade2XboxOne_ is a fork of Xarcade2Jstick with a more typical Xbox One button mapping.
 
 _Xarcade2Jstick_ exclusively captures the keyboard events of the __Xarcade Tankstick__ and maps these events to corresponding events on two virtual game pad devices.
 
@@ -16,16 +18,16 @@ The select buttons are the front buttons on each side of the joystick. The start
 
 ## Downloading
 
-If you would like to download the current version of _Xarcade2Jstick_ from [its Github repository](https://github.com/petrockblog/Xarcade2Joystick), you can use this command:
+If you would like to download the current version of _Xarcade2XBoxOne_ from [its Github repository](https://github.com/rexypoo/Xarcade2XBoxOne), you can use this command:
 ```bash
-git clone https://github.com/petrockblog/Xarcade2Jstick
+git clone https://github.com/rexypoo/Xarcade2XBoxOne
 ```
 
 ## Building and Installation
 
 To build Xarcade2Jstick follow these commands:
 ```bash
-cd Xarcade2Jstick
+cd Xarcade2XBoxOne
 make
 ```
 
@@ -36,7 +38,7 @@ sudo make install
 
 ## Installation as Service
 
-You can install _Xarcade2Jstick_ as daemon with this command:
+You can install _Xarcade2XBoxOne_ as daemon with this command:
 ```bash
 sudo make installservice
 ```
@@ -54,6 +56,4 @@ sudo make uninstall
 ```
 
 <br><br>
-__Have fun!__
-
--Florian [petrockblock.com](http://blog.petrockblock.com)
+__Special thanks to Florian [petrockblock.com](http://blog.petrockblock.com) for Xarcade2Jstick__
