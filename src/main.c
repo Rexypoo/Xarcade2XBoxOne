@@ -168,19 +168,19 @@ int main(int argc, char* argv[]) {
 					break;
 				case KEY_KP4:
 				case KEY_LEFT:
-					outputAxisChange(0,ABS_X, value == 0 ? 2 : 0); // center or left
+					outputKeyPress(0,BTN_DPAD_LEFT, isPressed);
 					break;
 				case KEY_KP6:
 				case KEY_RIGHT:
-					outputAxisChange(0,ABS_X,	value == 0 ? 2 : 4); // center or right
+					outputKeyPress(0,BTN_DPAD_RIGHT, isPressed);
 					break;
 				case KEY_KP8:
 				case KEY_UP:
-					outputAxisChange(0,ABS_Y,	value == 0 ? 2 : 0); // center or up
+					outputKeyPress(0,BTN_DPAD_UP, isPressed);
 					break;
 				case KEY_KP2:
 				case KEY_DOWN:
-					outputAxisChange(0,ABS_Y,	value == 0 ? 2 : 4); // center or down
+					outputKeyPress(0,BTN_DPAD_DOWN, isPressed);
 					break;
 
 					/* ----------------  Player 2 controls ------------------- */
@@ -243,16 +243,16 @@ int main(int argc, char* argv[]) {
 
 					/* joystick */
 				case KEY_D:
-					outputAxisChange(1,ABS_X, value == 0 ? 2 : 0); // center or left
+					outputKeyPress(1,BTN_DPAD_LEFT, isPressed);
 					break;
 				case KEY_G:
-					outputAxisChange(1,ABS_X, value == 0 ? 2 : 4); // center or right
+					outputKeyPress(1,BTN_DPAD_RIGHT, isPressed);
 					break;
 				case KEY_R:
-					outputAxisChange(1,ABS_Y, value == 0 ? 2 : 0); // center or up
+					outputKeyPress(1,BTN_DPAD_UP, isPressed);
 					break;
 				case KEY_F:
-					outputAxisChange(1,ABS_Y,value == 0 ? 2 : 4); // center or down
+					outputKeyPress(1,BTN_DPAD_DOWN, isPressed);
 					break;
 
 				default:
