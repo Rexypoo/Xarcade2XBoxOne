@@ -134,129 +134,129 @@ int main(int argc, char* argv[]) {
 				int isPressed = value > 0;
 				switch (xarcdev.ev[ctr].code) {
 
-				/* ----------------  Player 1 controls ------------------- */
-				/* buttons */
-				case KEY_LEFTCTRL:
-				  outputKeyPress(0,BTN_X, isPressed);
-					break;
-				case KEY_LEFTALT:
-					outputKeyPress(0,BTN_Y, isPressed);
-					break;
-				case KEY_SPACE:
-					outputKeyPress(0,BTN_TR, isPressed);
-					break;
-				case KEY_LEFTSHIFT:
-					outputKeyPress(0,BTN_A, isPressed);
-					break;
-				case KEY_Z:
-					outputKeyPress(0,BTN_B, isPressed);
-					break;
-				case KEY_X:
-					outputKeyPress(0,BTN_TR2, isPressed);
-					break;
-				case KEY_C:
-					outputKeyPress(0,BTN_TL, isPressed);
-					break;
-				case KEY_5:
-					outputKeyPress(0,BTN_TL2, isPressed);
-					break;
-				case KEY_1:
-					outputKeyPress(0,BTN_START, isPressed);
-					break;
-				case KEY_3:
-					outputKeyPress(0,BTN_SELECT, isPressed);
-					break;
-				case KEY_KP4:
-				case KEY_LEFT:
-					outputKeyPress(0,BTN_DPAD_LEFT, isPressed);
-					break;
-				case KEY_KP6:
-				case KEY_RIGHT:
-					outputKeyPress(0,BTN_DPAD_RIGHT, isPressed);
-					break;
-				case KEY_KP8:
-				case KEY_UP:
-					outputKeyPress(0,BTN_DPAD_UP, isPressed);
-					break;
-				case KEY_KP2:
-				case KEY_DOWN:
-					outputKeyPress(0,BTN_DPAD_DOWN, isPressed);
-					break;
-
-					/* ----------------  Player 2 controls ------------------- */
+					/* ----------------  Player 1 controls ------------------- */
 					/* buttons */
-				case KEY_A:
-					outputKeyPress(1,BTN_X,	isPressed);
-					break;
-				case KEY_S:
-					outputKeyPress(1,BTN_Y, isPressed);
-					break;
-				case KEY_Q:
-					outputKeyPress(1,BTN_TR, isPressed);
-					break;
-				case KEY_W:
-					outputKeyPress(1,BTN_A, isPressed);
-					break;
-				case KEY_E:
-					outputKeyPress(1,BTN_B, isPressed);
-					break;
-				case KEY_LEFTBRACE:
-					outputKeyPress(1,BTN_TR2, isPressed);
-					break;
-				case KEY_RIGHTBRACE:
-					outputKeyPress(1,BTN_TL, isPressed);
-					break;
-				case KEY_6:
-					outputKeyPress(1,BTN_TL2, isPressed);
-					break;
-				case KEY_2:
-					/* handle combination */
-					if (keyStates[KEY_4] && xarcdev.ev[ctr].value) {
-						uinput_kbd_write(&uinp_kbd, KEY_TAB, 1, EV_KEY);
-						uinput_kbd_sleep();
-						uinput_kbd_write(&uinp_kbd, KEY_TAB, 0, EV_KEY);
-						combo = 2;
-						continue;
-					}
-					/* it's a key down, ignore */
-					if (xarcdev.ev[ctr].value)
-						continue;
-					if (!combo) {
-						outputKeyPress(1,BTN_START, 1);
-						uinput_gpad_sleep();
-						outputKeyPress(1,BTN_START, 0);
-					} else
-						combo--;
-					break;
-				case KEY_4:
-					/* it's a key down, ignore */
-					if (xarcdev.ev[ctr].value)
-						continue;
-					if (!combo) {
-						outputKeyPress(1,BTN_SELECT, 1);
-						uinput_gpad_sleep();
-						outputKeyPress(1,BTN_SELECT, 0);
-					} else
-						combo--;
+					case KEY_LEFTCTRL:
+						outputKeyPress(0,BTN_X, isPressed);
+						break;
+					case KEY_LEFTALT:
+						outputKeyPress(0,BTN_Y, isPressed);
+						break;
+					case KEY_SPACE:
+						outputKeyPress(0,BTN_TR, isPressed);
+						break;
+					case KEY_LEFTSHIFT:
+						outputKeyPress(0,BTN_A, isPressed);
+						break;
+					case KEY_Z:
+						outputKeyPress(0,BTN_B, isPressed);
+						break;
+					case KEY_X:
+						outputKeyPress(0,BTN_TR2, isPressed);
+						break;
+					case KEY_C:
+						outputKeyPress(0,BTN_TL, isPressed);
+						break;
+					case KEY_5:
+						outputKeyPress(0,BTN_TL2, isPressed);
+						break;
+					case KEY_1:
+						outputKeyPress(0,BTN_START, isPressed);
+						break;
+					case KEY_3:
+						outputKeyPress(0,BTN_SELECT, isPressed);
+						break;
+					case KEY_KP4:
+					case KEY_LEFT:
+						outputKeyPress(0,BTN_DPAD_LEFT, isPressed);
+						break;
+					case KEY_KP6:
+					case KEY_RIGHT:
+						outputKeyPress(0,BTN_DPAD_RIGHT, isPressed);
+						break;
+					case KEY_KP8:
+					case KEY_UP:
+						outputKeyPress(0,BTN_DPAD_UP, isPressed);
+						break;
+					case KEY_KP2:
+					case KEY_DOWN:
+						outputKeyPress(0,BTN_DPAD_DOWN, isPressed);
+						break;
 
-					break;
+						/* ----------------  Player 2 controls ------------------- */
+						/* buttons */
+					case KEY_A:
+						outputKeyPress(1,BTN_X,	isPressed);
+						break;
+					case KEY_S:
+						outputKeyPress(1,BTN_Y, isPressed);
+						break;
+					case KEY_Q:
+						outputKeyPress(1,BTN_TR, isPressed);
+						break;
+					case KEY_W:
+						outputKeyPress(1,BTN_A, isPressed);
+						break;
+					case KEY_E:
+						outputKeyPress(1,BTN_B, isPressed);
+						break;
+					case KEY_LEFTBRACE:
+						outputKeyPress(1,BTN_TR2, isPressed);
+						break;
+					case KEY_RIGHTBRACE:
+						outputKeyPress(1,BTN_TL, isPressed);
+						break;
+					case KEY_6:
+						outputKeyPress(1,BTN_TL2, isPressed);
+						break;
+					case KEY_2:
+						/* handle combination */
+						if (keyStates[KEY_4] && xarcdev.ev[ctr].value) {
+							uinput_kbd_write(&uinp_kbd, KEY_TAB, 1, EV_KEY);
+							uinput_kbd_sleep();
+							uinput_kbd_write(&uinp_kbd, KEY_TAB, 0, EV_KEY);
+							combo = 2;
+							continue;
+						}
+						/* it's a key down, ignore */
+						if (xarcdev.ev[ctr].value)
+							continue;
+						if (!combo) {
+							outputKeyPress(1,BTN_START, 1);
+							uinput_gpad_sleep();
+							outputKeyPress(1,BTN_START, 0);
+						} else
+							combo--;
+						break;
+					case KEY_4:
+						/* it's a key down, ignore */
+						if (xarcdev.ev[ctr].value)
+							continue;
+						if (!combo) {
+							outputKeyPress(1,BTN_SELECT, 1);
+							uinput_gpad_sleep();
+							outputKeyPress(1,BTN_SELECT, 0);
+						} else
+							combo--;
 
-					/* joystick */
-				case KEY_D:
-					outputKeyPress(1,BTN_DPAD_LEFT, isPressed);
-					break;
-				case KEY_G:
-					outputKeyPress(1,BTN_DPAD_RIGHT, isPressed);
-					break;
-				case KEY_R:
-					outputKeyPress(1,BTN_DPAD_UP, isPressed);
-					break;
-				case KEY_F:
-					outputKeyPress(1,BTN_DPAD_DOWN, isPressed);
-					break;
+						break;
 
-				default:
-					break;
+						/* joystick */
+					case KEY_D:
+						outputKeyPress(1,BTN_DPAD_LEFT, isPressed);
+						break;
+					case KEY_G:
+						outputKeyPress(1,BTN_DPAD_RIGHT, isPressed);
+						break;
+					case KEY_R:
+						outputKeyPress(1,BTN_DPAD_UP, isPressed);
+						break;
+					case KEY_F:
+						outputKeyPress(1,BTN_DPAD_DOWN, isPressed);
+						break;
+
+					default:
+						break;
 				}
 			}
 		}
